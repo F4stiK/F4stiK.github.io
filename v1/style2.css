@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: rgb(73,74,186);
+background: linear-gradient(90deg, rgba(73,74,186,1) 0%, rgba(31,185,212,1) 100%);
+	background-size: 300%;
+	animation: color 10s ease-in-out infinite;
+}
+@keyframes color{
+	0%{
+		background-position: 0 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0 50%;
+	}
+}
+.container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 100px 50px;
+	padding: 100px 50px;
+
+}
+.container .card {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	width: 350px;
+	height: 300px;
+	background: #fff;
+	border-radius: 20px;
+	box-shadow: 0 35px 80px rgba(0, 0, 0, .15);
+	transition: .5s;
+}
+.container .card:hover {
+	height: 400px;
+} 
+.container .card .imgBx {
+	position: absolute;
+	top: 20px;
+	width: 300px;
+	height: 220px;
+	background: #333;
+	border-radius: 12px;
+	overflow: hidden;
+	transition: .5s;
+}
+.container .card:hover .imgBx {
+	top: -100px;
+	scale: 0.75;
+	box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+.container .card .imgBx img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.container .card .content{
+	position: absolute;
+	top: 252px;
+	width: 100%;
+	height: 30px;
+	padding: 0 30px;
+	text-align: center;
+	overflow-y: scroll;
+	transition: .5s;
+}
+.container .card:hover .content{
+	top: 130px;
+	height: 250px;
+}
+.container .card .content h2{
+	font-size: 1.5em;
+	font-weight: 700;
+	color:  var(--clr);
+
+}
+.container .card .content p{
+	color:  #333;
+}
+/*.cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 225px);
+	width: 100%;
+	max-width: 1000px;
+	justify-content: center;
+	justify-items: center;
+	column-gap: 30px; 
+	row-gap: 40px; 
+	margin: 0 auto;
+}*/
