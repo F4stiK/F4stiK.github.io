@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+   background-image: url('dasd.jpg');
+    background-size: cover;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card{
+    cursor: pointer;
+    width: 450px;
+    height: 600px;
+
+}
+
+.front,
+.back{
+
+    padding: 10px;
+    width: 95%;
+    height: 95%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+    border-radius: 10px;
+}
+
+.back p{
+   font-size: 26px;
+   margin-bottom: 5px;
+}
+
+.back-content p:last-child{
+    position: relative;
+    top: 100px;
+    text-align: center;
+    font-size: 16px;
+    color: gray;
+}
+
+
+.front{
+    color: white;
+/*    background-image: url('1.1.jpg');*/
+    background-size: cover;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 650px;
+    transform: perspective(600px) rotateY(0deg);
+    background-color: rgba(58, 56, 56, 0.55);
+
+}
+.back{
+    transform: perspective(600px) rotateY(180deg);
+   background-color: rgba(241, 241, 241, 0.95);
+}
+
+.back-content{
+   
+    width: 100%;
+    color: #333333;
+}
+.card:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+}
